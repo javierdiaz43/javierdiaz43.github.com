@@ -1,0 +1,12 @@
+/* Para escribir comentarios */
+p{
+  color:red;
+}
+.red{
+  height: 200px;
+  width: 100px;
+  background-color: red;
+}
+#boton-pago{
+  background-color: yellow;
+}
