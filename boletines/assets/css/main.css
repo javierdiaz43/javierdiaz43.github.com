@@ -1,0 +1,173 @@
+/* Colores:
+Rosa links #d500f9
+Rosa: #C6426E
+Morado: #642b73
+Negro: #999
+Gris: #F5F5F5
+ */
+ html{ /*especifica la fuente para toda nuestra pagina web*/
+   font-family: 'Nunito', sans-serif;
+ }
+
+ a{ /*modifica propiedaes de los links*/
+   text-decoration: none; /*elimina el subrayado en los hypervinculos*/
+   color:#d500f9;
+ }
+
+ img{
+   max-width: 100%;
+ }
+
+a:hover{
+  opacity: 0.4;
+}
+
+ .title{
+   text-transform: uppercase;
+   text-align: center;
+ }
+
+ .title-item{
+   /*border-bottom-style: solid;
+   border-width: 2px;
+   border-color: #C6426E;*/
+   border-bottom: solid 2px #C6426E;  /* SHORTHAND PROPIERTIES agrupa propiedades de la clase en uns sola declaracion.*/
+   padding-bottom: 1em;
+   font-size: 2em;
+   /*para padding: y margin:
+   si se indican cuatro valroes, se toman como las manecillas de un reloj, 1 arriba, 2 derecha, 3 abajo, 4 izquierda.
+   si se indican dos valores, se toma 1 arriba y abajo, 2 derecha izquierda.
+   si se indica un solo valor, este se asigna a todos los lados*/
+ }
+
+.address{
+  font-weight: bold;
+  color: #642b73;
+  font-style: 1.2em;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.main-image{
+  float: left;
+  margin-right: 1em;
+}
+
+ .paragraph{
+   line-height: 1.8em;
+   font-weight: 300px; /*al especificar el grosor, tener en cuenta los que se inportaron y se declararon en el archivo html*/
+ }
+
+ .container{
+   background: #2980B9;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   height: 100vh; /*vh, viewport, indica el alto total de la pantalla, vw seria el ancho total de la pantalla */
+   display: flex; /*propiedad flexbox*/
+   align-items: center;
+   justify-content: center; /*estas dos ultimas propiedades centran el content con respecto al container*/
+ }
+
+ .content{
+   max-width: 960px;
+   width: 100%; /*indica el 100% del espacio disponible del elemento padre*/
+   /*max-height: 500px;
+    height: 100%; estas dos lineas se reemplazan para usar responsive*/
+   height: 80vh;
+   background-color: white;
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+   border-radius: 4px;
+   position: relative; /* se le da este valor para que las clases hijas puedan ser posicionadas con respecto a este elemento y no sobre el viewport.*/
+   overflow-y: scroll; /*define como se comporta el contenido que se sale de las dimensiones maximas del elemento.*/
+ }
+
+ .content{
+   padding: 1em;
+ }
+ td{ /* para romper la estructura de la tabla*/
+     display: block; /*para tranformar las columnas en filas*/
+     width: 100%; /* indica que las celdas de la tabla deben usar todo el ancho de la fila*/
+ }
+ td:nth-of-type(1){ /*Nos permite seleccionar un elemento basado en su posición cuando esta al lado de etiquetas del mismo tipo, en este caso seleccionamos la primer fila */
+   font-size: 1.5em;
+   font-weight: bold;
+   color: red;
+ }
+ th{ /*para ocultar los encabezados*/
+   display: none;
+ }
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: #642b73;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-weight: 300px;
+  cursor: pointer; /*convierte el cursor en una manito*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ .fa-star, .fa-star-o{
+   color: #ffc400;
+ }
+
+ .table{
+    width: 100%;
+    border-spacing: 0; /* se utiliza para que no haya espacio entre las celdas de la tabla.*/
+ }
+
+ .table td, .table th{
+   padding: 1em;
+   text-align: left;
+ }
+
+ .table tr:nth-child(even){ /*"even" selecciona los hijos pares; "odd" selecciona los hijos impares*/
+   background-color: #f3e5f5;
+ }
+
+.position{
+  background-color: #C6426E;
+  color: white;
+  padding: 0.5em;
+  /*ahora usamoslas shorthand PROPIERTIES que son similares a las de padding:
+  padding-top-left-radius:2em;
+  padding-top-right-radius:2em;
+  padding-bottom-left-radius:2em;
+  padding-bottom-right-radius:2em; */
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+@media (min-width: 700px) {
+  th{
+    display: table-cell; /*recontruye la estructura de la tabla*/
+
+  }
+  td{
+    display: table-cell;
+    width: auto;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+  .content{
+    padding: 1.8em;
+  }
+}
+
+@media (min-height: 550px) { /* Estas propiedades se utilizaran sólo para pantallas con altura de 550px en adelante*/
+  .content{
+    height: 500px;
+  }
+}
