@@ -12,8 +12,9 @@ links.forEach(function(link)){
     //Agregar clases para animar la salida "fadeOutUp"
     content.classList.add("fadeOutUp");
     content.classList.add("animated");
-
-    location.ref = "/";
+    setTimeout(function){  // genera un delay de 600 milisegundos en la ejecucion de la sig. instrucción
+      location.ref = "/";  //no devuelve a la pagina inicial
+    }, 600)
     return false;
   });
 });
