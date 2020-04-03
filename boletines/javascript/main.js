@@ -14,7 +14,7 @@ links.forEach(function(link){
     content.classList.add("animated");
 
     setTimeout(function(){  // genera un delay de 600 milisegundos en la ejecucion de la sig. instrucción
-      location.href = "/";  //no devuelve a la pagina inicial
+      location.href = "/boletines";  //no devuelve a la pagina inicial
     }, 600)
     return false;
   });
